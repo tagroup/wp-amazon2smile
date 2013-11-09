@@ -11,11 +11,11 @@ Description: WordPress Plugin that changes Amazon Affiliate links to Smile Amazo
 function process_content ($content)
 {
     
-    $pattern = '/http:\/\/(smile)(\.amazon\.com\/[\S]*[\'|"])/i' ;
+    $pattern = '/http:\/\/(www)(\.amazon\.com\/[\S]*[\'|"])/i' ;
     $content =
         preg_replace (
             $pattern,
-            'http://smile2${2}',
+            'http://smile${2}',
             $content
         );
 
